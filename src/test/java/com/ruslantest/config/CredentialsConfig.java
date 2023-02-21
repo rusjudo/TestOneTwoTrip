@@ -1,0 +1,22 @@
+package com.ruslantest.config;
+
+
+import org.aeonbits.owner.Config;
+
+@Config.Sources("classpath:config/credentials.properties")
+
+public interface CredentialsConfig extends Config {
+
+    String user();
+    String password();
+
+    String email();
+
+    String passwordOneTwoTrip();
+
+    @DefaultValue("")
+    String remote();
+
+    @DefaultValue("")
+    String videoStorage();
+}
